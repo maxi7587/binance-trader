@@ -2,7 +2,7 @@
 # @yasinkuyu
 
 class Messages():
-    
+
     @staticmethod
     def get(msg):
         print('Message : ' + msg)

@@ -38,7 +38,7 @@ BNB_COMMISION   = 0.0005
 
 class Trading():
 
-    # Define trade vars  
+    # Define trade vars
     order_id = 0
     order_data = None
 
@@ -194,7 +194,7 @@ class Trading():
             return
 
         '''
-        If all sales trials fail, 
+        If all sales trials fail,
         the grievance is stop-loss.
         '''
 
@@ -397,7 +397,7 @@ class Trading():
         # Target buy price, add little increase #87
         buyPrice = lastBid + self.increasing
 
-        # Target sell price, decrease little 
+        # Target sell price, decrease little
         sellPrice = lastAsk - self.decreasing
 
         # Spread ( profit )
@@ -436,8 +436,8 @@ class Trading():
             if self.option.mode == 'range':
                 profitableSellingPrice = self.option.sellprice
 
-            '''            
-            If the order is complete, 
+            '''
+            If the order is complete,
             try to sell it.
             '''
 
@@ -449,8 +449,8 @@ class Trading():
 
         '''
         Did profit get caught
-        if ask price is greater than profit price, 
-        buy with my buy price,    
+        if ask price is greater than profit price,
+        buy with my buy price,
         '''
         if (lastAsk >= profitableSellingPrice and self.option.mode == 'profit') or \
            (lastPrice <= float(self.option.buyprice) and self.option.mode == 'range'):
